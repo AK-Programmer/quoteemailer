@@ -8,15 +8,6 @@ def importData():
     df = df[df['Tags'].str.contains('philosophy', na=False)] #Filtering out quotes not related to philosophy
     return df
 
-"""
-1. Randomly choose quotes
-2. Take quote and author, put into string --> Make sure it's a number that hasn't been chosen before
-3. Send string to email
-
-- random should be 1 to 19666
-- use .iloc[] to choose row
-"""
-
 def chooseQuote(): #Chooses the quote and makes sure it hasn't been chosen before
     quoteChosen = False #Tells the program if a quote has been chosen
     f = open("previous.txt", mode='r', encoding='utf-8')
